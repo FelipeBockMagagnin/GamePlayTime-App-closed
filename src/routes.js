@@ -28,15 +28,15 @@ function TabNavigator () {
 
           switch (route.name.toLowerCase()) {
             case 'games':
-              iconName = 'activity'
+              iconName = 'layers'
               break
 
             case 'discover':
-              iconName = 'activity'
+              iconName = 'search'
               break
 
             case 'profile':
-              iconName = 'activity'
+              iconName = 'user'
               break
           }
 
