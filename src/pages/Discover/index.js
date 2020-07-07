@@ -3,7 +3,7 @@ import { View, Text, FlatList, Image } from 'react-native'
 import axios from 'axios'
 import Constants from 'expo-constants'
 
-export default function Discover () {
+export default function Discover ({ navigation }) {
   const [games, setGames] = useState()
 
   useEffect(() => {
@@ -22,23 +22,24 @@ export default function Discover () {
         data={games}
         keyExtractor={games => String(games.id)}
         numColumns={2}
-        renderItem={({ item: games }) => (
+        renderItem={({ item: game }) => (
           <View style={{
             flex: 1,
             padding: 8,
             margin: 5,
             borderRadius: 10,
             backgroundColor: '#FFF'
-          }}>
+          }}
+          onTouchEnd={() => { navigation.navigate('Game', { gameID: game.id }) }}>
             <Image
               style={{
                 width: 'auto',
                 height: 100
               }}
               source={{
-                uri: games.background_image
+                uri: game.background_image
               }} />
-            <Text style={{ textAlign: 'center', fontWeight: 'bold' }}>{games.name}</Text>
+            <Text style={{ textAlign: 'center', fontWeight: 'bold' }}>{game.name}</Text>
           </View>
         )}
       />
