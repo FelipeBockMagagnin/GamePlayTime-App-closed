@@ -7,6 +7,7 @@ import { Feather } from '@expo/vector-icons'
 import Login from './pages/Login'
 import Discover from './pages/Discover'
 import Profile from './pages/Profile'
+import Game from './pages/Game'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
@@ -17,6 +18,7 @@ export default function Routes () {
       <Stack.Navigator initialRouteName='Login'>
         <Stack.Screen name='Login' options={{ title: 'Login' }} component={Login} />
         <Stack.Screen name='Home' options={{ headerShown: false }} component={TabNavigator} />
+        <Stack.Screen name='Game' component={Game} />
       </Stack.Navigator>
     </NavigationContainer>
   )
