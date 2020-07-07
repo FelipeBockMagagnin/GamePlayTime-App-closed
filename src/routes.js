@@ -5,6 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Games from './pages/Games'
 import { Feather } from '@expo/vector-icons'
 import Login from './pages/Login'
+import Discover from './pages/Discover'
+import Profile from './pages/Profile'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
@@ -49,8 +51,8 @@ function TabNavigator () {
       }}
     >
       <Tab.Screen name='Games' component={Games} />
-      <Tab.Screen name='Discover' component={Games} />
-      <Tab.Screen name='Profile' component={Games} />
+      <Tab.Screen name='Discover' component={Discover} />
+      <Tab.Screen name='Profile' component={Profile} />
     </Tab.Navigator>
   )
 }
