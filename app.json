@@ -9,6 +9,10 @@
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+    },    
+    "android": {
+      "package": "com.dotelpy.gameplaytime",
+      "versionCode": 1
     },
     "updates": {
       "fallbackToCacheTimeout": 0
